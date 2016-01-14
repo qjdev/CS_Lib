@@ -9,7 +9,7 @@
 	<projectUrl>https://github.com/fengrui358/CS_Lib/tree/master/Src/Library/Log/log4net.Wrap</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>log4net simply wrap</description>
-    <copyright>Copyright fengrui358 2015</copyright>
+    <copyright>Copyright fengrui 2016</copyright>
     <tags>log4net log wrap</tags>
   </metadata>
 </package>
