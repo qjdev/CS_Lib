@@ -1,0 +1,2 @@
+使用NuGet发布自己的类库包（Library Package） 
+http://www.cnblogs.com/daxnet/archive/2013/05/07/3064577.html

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>fengrui</authors>
+    <owners>fengrui</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>log4net的一些简单封装</description>
+    <copyright>Copyright fengrui358 2015</copyright>
+    <tags>log4net log wrap</tags>
+  </metadata>
+</package>
