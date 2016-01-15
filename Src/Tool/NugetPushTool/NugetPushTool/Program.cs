@@ -89,9 +89,12 @@ namespace NugetPushTool
                 //规则为目录下有两个nupkg文件，删除版本号小的那个，推送大的那个
                 var nupkgList = srcDir[0].GetFiles("*.nupkg", SearchOption.AllDirectories);
 
+                //已推送的文件名
+                var alreadyPush = new List<string>();
+
                 foreach (var fileInfo in nupkgList)
                 {
-                    //排除第三方库的pack
+                    //排除第三方库的pack(目录下不含工程文件的为第三方库)
                     if (!fileInfo.Directory.GetFiles("*.csproj", SearchOption.TopDirectoryOnly).Any())
                     {
                         continue;
@@ -105,7 +108,13 @@ namespace NugetPushTool
                     if (newFileInfo != null && newFileInfo.Exists)
                     {
                         Console.WriteLine("准备推送文件{0}", newFileInfo.FullName);
-                        process.StandardInput.WriteLine("nuget push {0}", newFileInfo.FullName);
+
+                        if (!alreadyPush.Contains(newFileInfo.FullName))
+                        {
+                            process.StandardInput.WriteLine("nuget push {0}", newFileInfo.FullName);
+                            alreadyPush.Add(newFileInfo.FullName);
+                        }
+
                         if (toDelelteList != null && toDelelteList.Any())
                         {
                             foreach (var info in toDelelteList)
@@ -117,6 +126,7 @@ namespace NugetPushTool
                     }
                 }
 
+                Console.WriteLine("运行完毕");
                 Console.ReadKey();
             }
             catch (Exception e)

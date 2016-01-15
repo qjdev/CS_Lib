@@ -6,7 +6,7 @@
     <title>$title$</title>
     <authors>qinjin</authors>
     <owners>fengrui</owners>
-	<projectUrl>https://github.com/fengrui358/CS_Lib/tree/master/Src/Library/Log/log4net.Wrap</projectUrl>
+	<projectUrl>https://github.com/qjdev/CS_Lib/tree/master/Src/Library/Log/log4net.Wrap</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>log4net simply wrap</description>
     <copyright>Copyright fengrui 2016</copyright>
